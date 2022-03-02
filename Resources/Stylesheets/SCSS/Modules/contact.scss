@@ -1,0 +1,222 @@
+@import "../base/global";
+
+.contact {
+  --gap-section: 7rem;
+  position: relative;
+  margin-top: var(--gap-section);
+  @include res-min-tablet {
+    --gap-section: 10rem;
+  }
+
+  &__container {
+    --column: 1fr;
+    --gap-container: #{$gap-xxl};
+    @include grid-columns(
+      def,
+      var(--column),
+      var(--gap-container),
+      center,
+      center,
+      stretch
+    );
+
+    @include res-min-mobile-l {
+      --gap-container: 4rem;
+    }
+    @include res-min-tablet {
+      --column: 1fr 1fr;
+      --gap-container: 4rem;
+    }
+    @include res-min-desktop-xxl {
+      justify-items: center;
+    }
+  }
+
+  &__title {
+    @include res-min-tablet {
+      margin-left: 4rem;
+      transform: translate(0, 0);
+    }
+    @include res-min-desktop-s {
+      margin-left: 6rem;
+    }
+    @include res-min-desktop-l {
+      margin-left: 8rem;
+    }
+
+    h2 {
+      margin-bottom: var(--gap-xxl);
+    }
+
+    a {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__address {
+    --col-count: 1;
+    @include grid-columns(
+      def,
+      repeat(var(--col-count), minmax($gap-l, 1fr)),
+      var(--gap-l),
+      stretch,
+      center,
+      stretch
+    );
+
+    > div:first-of-type {
+      @include flex-set(def, row, wrap, $gap-l, flex-start, flex-start, normal);
+    }
+
+    > div {
+      @include flex-set(
+        def,
+        column,
+        wrap,
+        $gap-xs,
+        flex-start,
+        flex-start,
+        normal
+      );
+    }
+
+    p {
+      font-size: large;
+      span {
+        margin-right: var(--gap-s);
+        color: var(--color-primary);
+      }
+    }
+    span {
+      font-family: var(--font-title);
+      font-size: 1.4rem;
+    }
+    svg {
+      fill: var(--color-primary);
+    }
+    address,
+    a {
+      margin-left: $gap-l;
+      font-family: var(--font-text);
+      font-size: large;
+      color: var(--color-secondary);
+      text-decoration: none;
+    }
+    .icon {
+      --icon-size: 1.2rem;
+    }
+  }
+
+  &__form {
+    --color-box-shadow: #{$color-box-shadow};
+    @include box-shadow();
+    position: relative;
+    width: 100%;
+    padding: var(--gap-l);
+    background-color: var(--color-white);
+    border-radius: var(--gap);
+
+    @include res-max-tablet {
+      grid-row: end;
+    }
+    @include res-min-desktop-s {
+      padding: 5rem var(--gap-xxl) var(--gap-xl) var(--gap-xxl);
+    }
+
+    &:after {
+      @include res-min-desktop-s {
+        --bg-image: url("../images/circles/contact-dots.svg");
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: block;
+        content: "";
+        width: 172%;
+        aspect-ratio: 1171 / 374;
+        background-image: var(--bg-image);
+        background-repeat: no-repeat;
+        background-position: bottom 0 left 0;
+        transform: translate(-10%, 30%);
+        z-index: -1;
+      }
+    }
+
+    &:before {
+      --shape-radius: 0;
+      position: absolute;
+      top: -$gap-l;
+      right: -1rem;
+      content: "";
+      width: 100vw;
+      height: calc(100% + 3.2rem);
+      background: linear-gradient(
+        45deg,
+        $color-primary 0%,
+        $color-primary--darken 100%
+      );
+      border-radius: var(--shape-radius);
+      z-index: -1;
+
+      @include res-min-mobile-l {
+        right: -1.6rem;
+      }
+      @include res-min-tablet {
+        --shape-radius: 3rem;
+        top: 4rem;
+        right: -4.8rem;
+        height: 100%;
+      }
+      @include res-min-desktop-s {
+        --shape-radius: 6rem;
+        top: 6.4rem;
+        right: -7.6rem;
+        height: 107%;
+      }
+      @include res-min-desktop-l {
+        height: 112%;
+      }
+    }
+
+    button {
+      text-align: center;
+    }
+
+    > div {
+      margin-bottom: var(--gap-xxl);
+      @include res-min-tablet {
+        margin-bottom: var(--gap-xl);
+      }
+      @include res-min-desktop-s{
+        margin-bottom: 4.2rem;
+      }
+
+      h3 {
+        margin-bottom: var(--gap);
+        font-size: 2rem;
+        text-transform: uppercase;
+      }
+
+      p {
+        color: var(--color-secondary);
+      }
+    }
+
+    form {
+      --col-count: 2;
+      --column-gap: #{$gap-l};
+      @include grid-columns(
+        def,
+        repeat(var(--col-count), minmax($gap-l, 1fr)),
+        var(--column-gap),
+        stretch,
+        center,
+        stretch
+      );
+      @include res-min-tablet {
+        --column-gap: #{$gap-xl};
+      }
+    }
+  }
+}

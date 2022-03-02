@@ -1,0 +1,88 @@
+@import "../Base/global";
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  font-family: var(--font-title);
+}
+
+p,
+span,
+small {
+  font-family: var(--font-text);
+}
+
+.title {
+  --title-color: #{$color-black};
+  font-size: 3em;
+  font-weight: 600;
+  color: var(--title-color);
+
+  @include res-min-tablet {
+    font-size: 3.2em;
+  }
+  @include res-min-desktop-m {
+    font-size: 4em;
+  }
+
+  > strong {
+    display: block;
+    font-size: 0.4em;
+    font-weight: 400;
+    color: var(--color-primary);
+    text-transform: uppercase;
+  }
+
+  &--absolute {
+    --title-left: 15%;
+    position: absolute;
+    top: 8rem;
+    left: 15%;
+    z-index: 50;
+
+    @include res-max-desktop-l {
+      --title-left: 10%;
+    }
+
+    @include res-max-desktop-m {
+      --title-left: var(--pad-base);
+    }
+
+    @include res-max-mobile-l {
+      --title-left: 1rem;
+    }
+  }
+}
+
+.desc {
+  --desc-font-size: 22px;
+  font-family: $font-text;
+  font-size: var(--desc-font-size);
+  font-weight: 300;
+  line-height: 1.7;
+
+  @include res-max-desktop-s {
+    --desc-font-size: large;
+  }
+
+  &--form {
+    @include res-max-tablet {
+      line-height: 1.4;
+    }
+  }
+}

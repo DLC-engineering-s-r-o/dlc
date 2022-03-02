@@ -1,0 +1,83 @@
+@import "../base/global";
+
+.services {
+  --gap-section: 7rem;
+  padding-top: var(--gap-section);
+
+  &__container {
+    --gap-container: #{$gap-xxl};
+    @include grid-columns(
+      def,
+      1fr,
+      var(--gap-container),
+      stretch,
+      center,
+      stretch
+    );
+  }
+
+  &__title {
+    h2 {
+      margin-bottom: $gap-l;
+    }
+  }
+
+  &__content {
+    --column: 1fr;
+    --column-gap: #{$gap};
+    --align-items: center;
+    --justify-content: center;
+    --align-content: stretch;
+    @include grid-columns(
+      def,
+      var(--column),
+      var(--column-gap),
+      var(--align-items),
+      var(--justify-content),
+      var(--align-content)
+    );
+    justify-items: center;
+
+    @include res-min-tablet {
+      --column: 2fr 1fr;
+      --column-gap: #{$gap-xl};
+    }
+    @include res-min-desktop-s {
+      --column-gap: #{$gap-xl};
+    }
+
+    h3 {
+      margin-bottom: var(--gap);
+      font-size: 2rem;
+      text-transform: uppercase;
+    }
+
+    p {
+      margin-bottom: var(--gap-l);
+      color: var(--color-secondary);
+
+      strong {
+        font-family: inherit;
+        font-weight: bold;
+      }
+
+      a {
+        font-weight: bold;
+        color: inherit;
+      }
+    }
+
+    &--reverse {
+      --column: 1fr;
+      @include res-min-tablet {
+        --column: 1fr 2fr;
+      }
+
+      > picture {
+        @include res-max-tablet {
+          grid-row: end;
+        }
+      }
+    }
+  }
+}
