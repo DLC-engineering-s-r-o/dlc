@@ -35,13 +35,17 @@ body {
   }
 
   .redirect-card {
-    --box-gap: #{$gap-l};
+    --box-gap: 4.6rem;
+    --padding: 3.2rem 1.6rem;
     --align-items: center;
     --justify-content: normal;
     --align-content: center;
+    padding: var(--padding);
     background: var(--color-white);
-    border-radius: 3rem;
-    font-size: 100px;
+    border-radius: var(--gap-xl);
+    font-size: 10px;
+    text-decoration: none;
+
     @include flex-set(
       def,
       column,
@@ -54,36 +58,49 @@ body {
     @include box-shadow();
 
     &:hover {
-      &__bottom {
-        > span {
-          text-decoration: underline;
-        }
-      }
+        //--color-box-shadow: hsla(0, 0%, 0%, 0.22);
     }
 
     &__top {
       > svg {
-        max-width: 1.2em;
+        max-width: 10.2em;
+        height: auto;
       }
     }
 
     &__center {
+      font-size: 10px;
       text-align: center;
 
-      > p {
-        font-size: 0.32em;
+      > .title {
+        margin-bottom: 0.8em;
+        font-size: 2.4em;
+        color: var(--color-primary);
         white-space: nowrap;
+
+        &--yellow {
+          color: var(--color-yellow);
+        }
       }
+
       > small {
-        font-size: 0.18em;
+        font-size: 1.8em;
+        line-height: 1.4;
+        color: var(--color-secondary);
       }
     }
 
     &__bottom {
+      font-size: 10px;
+
       > span {
-        font-size: 0.18em;
+        font-size: 1.8em;
         color: var(--color-primary);
         text-transform: uppercase;
+
+        &:hover{
+            text-decoration: underline;
+        }
       }
     }
   }
