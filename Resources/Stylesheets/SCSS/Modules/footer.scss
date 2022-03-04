@@ -1,11 +1,10 @@
 @import "../base/global";
 
-.footer {
-  --gap-section: 5rem;
+.footer-guidepost {
+  --gap-section: 8rem;
   padding: 0 1rem;
   padding-top: var(--gap-section);
   padding-bottom: var(--gap-xxl);
-  background-color: var(--color-white);
   color: var(--color-black);
   text-align: center;
     
