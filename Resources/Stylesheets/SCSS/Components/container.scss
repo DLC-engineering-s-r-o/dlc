@@ -6,6 +6,10 @@
   min-width: 1200px;
   margin: 0 auto;
 
+  &--s{
+    max-width: 1100px;
+  }
+
   @include res-max-desktop-l {
     width: 80%;
     min-width: 1024px;
