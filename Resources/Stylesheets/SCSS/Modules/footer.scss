@@ -1,14 +1,37 @@
 @import "../base/global";
 
-.footer-guidepost {
-  --gap-section: 8rem;
+footer {
   padding: 0 1rem;
-  padding-top: var(--gap-section);
-  padding-bottom: var(--gap-xxl);
   color: var(--color-black);
-  text-align: center;
-    
+
   a {
     color: var(--color-secondary);
   }
+}
+
+.footer {
+  --gap-section: 5rem;
+  margin-top: var(--gap-section);
+  margin-bottom: var(--gap-xxl);
+  text-align: center;
+  @include res-min-mobile-l {
+    --gap-section: 5rem;
+    padding: 0 $gap-l;
+  }
+  @include res-min-tablet {
+    --gap-section: 8rem;
+  }
+  @include res-min-desktop-s {
+    --gap-section: 13rem;
+  }
+  @include res-min-desktop-l {
+    --gap-section: 15rem;
+  }
+}
+
+.footer-guidepost {
+  --gap-section: 8rem;
+  padding-top: var(--gap-section);
+  padding-bottom: var(--gap-xxl);
+  text-align: center;
 }
