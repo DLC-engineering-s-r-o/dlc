@@ -230,11 +230,7 @@
         $justify-content: var(--justify-content),
         $flow: var(--flow)
       );
-      @include res-min-tablet {
-        --justify-content: flex-start;
-        text-align: left;
-      }
-
+      
       p {
         font-family: var(--font-title);
         font-size: 1.5em;
@@ -267,14 +263,7 @@
     &__top {
       --justify-content: center;
       display: flex;
-      @include flex-set($justify-content: var(--justify-content));
-      @include res-min-tablet {
-        --justify-content: flex-end;
-        margin-bottom: -1rem;
-      }
-      @include res-min-desktop-m {
-        margin-bottom: -2rem;
-      }
+      @include flex-set($justify-content: var(--justify-content));      
     }
   }
 

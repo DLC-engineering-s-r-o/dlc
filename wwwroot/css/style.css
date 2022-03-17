@@ -746,15 +746,36 @@ small {
         .contact__form form {
           --column-gap: 2.4rem; } }
 
+footer {
+  padding: 0 1rem;
+  color: var(--color-black); }
+  footer a {
+    color: var(--color-secondary); }
+
+.footer {
+  --gap-section: 5rem;
+  margin-top: var(--gap-section);
+  margin-bottom: var(--gap-xxl);
+  text-align: center; }
+  @media only screen and (min-width: 426px) {
+    .footer {
+      --gap-section: 5rem;
+      padding: 0 1.6rem; } }
+  @media only screen and (min-width: 769px) {
+    .footer {
+      --gap-section: 8rem; } }
+  @media only screen and (min-width: 1025px) {
+    .footer {
+      --gap-section: 13rem; } }
+  @media only screen and (min-width: 1441px) {
+    .footer {
+      --gap-section: 15rem; } }
+
 .footer-guidepost {
   --gap-section: 8rem;
-  padding: 0 1rem;
   padding-top: var(--gap-section);
   padding-bottom: var(--gap-xxl);
-  color: var(--color-black);
   text-align: center; }
-  .footer-guidepost a {
-    color: var(--color-secondary); }
 
 .nav {
   --nav-color: #464749;
@@ -1128,10 +1149,6 @@ div[style*="color: rgb(0, 0, 0);"]:before {
       align-content: normal;
       justify-content: var(--justify-content);
       gap: 0; }
-      @media only screen and (min-width: 769px) {
-        .about .card__bottom {
-          --justify-content: flex-start;
-          text-align: left; } }
       .about .card__bottom p {
         font-family: var(--font-title);
         font-size: 1.5em;
@@ -1164,13 +1181,6 @@ div[style*="color: rgb(0, 0, 0);"]:before {
       align-content: normal;
       justify-content: var(--justify-content);
       gap: 0; }
-      @media only screen and (min-width: 769px) {
-        .about .card__top {
-          --justify-content: flex-end;
-          margin-bottom: -1rem; } }
-      @media only screen and (min-width: 1367px) {
-        .about .card__top {
-          margin-bottom: -2rem; } }
   .about .icon-wrapper {
     position: relative;
     display: block;
