@@ -1222,8 +1222,7 @@ div[style*="color: rgb(0, 0, 0);"]:before {
     align-items: var(--align-items);
     align-content: var(--align-content);
     justify-content: var(--justify-content);
-    grid-template-columns: var(--column);
-    justify-items: center; }
+    grid-template-columns: var(--column); }
     @media only screen and (min-width: 769px) {
       .services__content {
         --column: 2fr 1fr;
@@ -1231,10 +1230,27 @@ div[style*="color: rgb(0, 0, 0);"]:before {
     @media only screen and (min-width: 1025px) {
       .services__content {
         --column-gap: 2.4rem; } }
+    .services__content ul {
+      padding-left: var(--gap-xl);
+      margin-bottom: var(--gap-xxl); }
+      @media only screen and (min-width: 426px) {
+        .services__content ul {
+          padding-left: var(--gap-xxl); } }
+      .services__content ul li {
+        font-family: var(--font-title);
+        font-size: x-large;
+        line-height: 1.4; }
+        .services__content ul li::marker {
+          margin: 0 0.5rem 0 0;
+          font-size: 2rem;
+          color: var(--color-primary); }
+    @media only screen and (max-width: 1366px) {
+      .services__content img {
+        width: 100%;
+        max-width: 320px; } }
     .services__content h3 {
       margin-bottom: var(--gap);
-      font-size: 2rem;
-      text-transform: uppercase; }
+      font-size: 2rem; }
     .services__content p {
       margin-bottom: var(--gap-l);
       color: var(--color-secondary); }
@@ -1244,6 +1260,18 @@ div[style*="color: rgb(0, 0, 0);"]:before {
       .services__content p a {
         font-weight: bold;
         color: inherit; }
+    .services__content .img-wrapper {
+      --radius:2.4rem;
+      --color-box-shadow: rgba(0, 0, 0, 0.17);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 0 20px 0 var(--color-box-shadow); }
+      .services__content .img-wrapper:hover {
+        --color-box-shadow: rgba(0, 0, 0, 0.17); }
+      .services__content .img-wrapper > picture {
+        display: flex; }
+    .services__content--column {
+      --column: 1fr; }
     .services__content--reverse {
       --column: 1fr; }
       @media only screen and (min-width: 769px) {
