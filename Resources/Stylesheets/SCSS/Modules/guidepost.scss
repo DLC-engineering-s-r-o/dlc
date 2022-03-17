@@ -55,6 +55,8 @@
 }
 
 .wrapper-guidepost {
+  min-height: 100vh;
+
   &:after {
     position: absolute;
     top: 0;
