@@ -791,8 +791,8 @@ footer {
     content: "";
     width: 51%;
     height: 100%;
-    background-image: image-set("../images/backgrounds/header_bg.png" 1x, "../images/backgrounds/header_bg.png" 2x);
-    background-image: image-set("../images/backgrounds/header_bg.webp" 1x, "../images/backgrounds/header_bg.webp" 2x);
+    background-image: image-set("../images/backgrounds/bg_managment.png" 1x, "../images/backgrounds/bg_managment.png" 2x);
+    background-image: image-set("../images/backgrounds/bg_managment.png" 1x, "../images/backgrounds/bg_managment.png" 2x);
     background-repeat: no-repeat;
     background-position: right;
     background-size: cover; }
@@ -876,27 +876,6 @@ footer {
         margin-top: 0.7em;
         opacity: 0;
         animation: showButton var(--anim-length) calc(var(--anim-length) + var(--anim-delay)) linear forwards; }
-  .header__bg {
-    --bg-min-height: 0;
-    width: 100%;
-    min-height: var(--bg-min-height);
-    background-image: image-set("../images/backgrounds/header-bg_480.png" 1x, "../images/backgrounds/header-bg_960.png" 2x);
-    background-repeat: no-repeat;
-    background-position: right bottom;
-    opacity: 0;
-    animation: showImage 1s linear forwards;
-    transform: scale(0.9, 0.9);
-    z-index: 1;
-    background-size: contain; }
-    @media only screen and (min-width: 769px) {
-      .header__bg {
-        background-image: image-set("../images/backgrounds/header-bg_960.png" 1x, "../images/backgrounds/header-bg_1920.png" 1x); } }
-    @media only screen and (max-width: 425px) {
-      .header__bg {
-        --bg-min-height: 55vh;
-        position: absolute;
-        bottom: 0;
-        left: 0; } }
 
 @keyframes showRight {
   from {
@@ -1375,7 +1354,7 @@ div[style*="color: rgb(0, 0, 0);"]:before {
   .services__content {
     --column: 1fr;
     --column-gap: 0.8rem;
-    --align-items: center;
+    --align-items: start;
     --justify-content: center;
     --align-content: stretch;
     display: grid;
