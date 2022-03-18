@@ -5,7 +5,7 @@
   padding-top: var(--gap-section);
 
   &__container {
-    --gap-container: #{$gap-xxl};
+    --gap-container: calc(#{$gap-xxl} * 2);
     @include grid-columns(
       def,
       1fr,

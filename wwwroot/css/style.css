@@ -398,6 +398,10 @@ small {
     .desc--form {
       line-height: 1.4; } }
 
+.primary-link {
+  font-weight: normal;
+  color: var(--color-primary); }
+
 .button {
   --pad: 0.8rem;
   --btn-color: var(--color-white);
@@ -1342,7 +1346,7 @@ div[style*="color: rgb(0, 0, 0);"]:before {
   --gap-section: 7rem;
   padding-top: var(--gap-section); }
   .services__container {
-    --gap-container: 3.2rem;
+    --gap-container: calc(3.2rem * 2);
     display: grid;
     gap: var(--gap-container);
     align-items: stretch;
