@@ -790,7 +790,7 @@ footer {
   .header:after {
     position: absolute;
     top: 0;
-    right: -2px;
+    right: 0;
     display: block;
     content: "";
     width: 51%;
@@ -798,7 +798,7 @@ footer {
     background-image: image-set("../images/backgrounds/bg_managment.png" 1x, "../images/backgrounds/bg_managment.png" 2x);
     background-image: image-set("../images/backgrounds/bg_managment.png" 1x, "../images/backgrounds/bg_managment.png" 2x);
     background-repeat: no-repeat;
-    background-position: right;
+    background-position: right 100% top 100%;
     background-size: cover; }
   .header__container {
     --container-max-width: 1366px;
@@ -865,6 +865,9 @@ footer {
       animation: showUp var(--anim-length) linear forwards;
       transform: translateY(1rem);
       z-index: 1; }
+      @media only screen and (max-width: 425px) {
+        .header__content > h1 {
+          font-size: .7em; } }
     .header__content > p {
       opacity: 0;
       font-family: var(--font-title);
