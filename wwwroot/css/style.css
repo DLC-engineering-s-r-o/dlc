@@ -1235,6 +1235,7 @@ div[style*="color: rgb(0, 0, 0);"]:before {
     justify-content: var(--justify-content);
     grid-template-columns: var(--column);
     box-shadow: 30px 30px 75px 0 var(--color-box-shadow);
+    position: relative;
     max-width: 425px;
     padding: 1.6rem;
     background-color: var(--color-white);
@@ -1243,12 +1244,13 @@ div[style*="color: rgb(0, 0, 0);"]:before {
     border-radius: var(--gap);
     text-align: center;
     transform: translateY(var(--trans-y));
-    transition: opacity var(--trans-time) var(--trans-fnc), transform var(--trans-time) var(--trans-fnc); }
+    transition: opacity var(--trans-time) var(--trans-fnc), transform var(--trans-time) var(--trans-fnc);
+    z-index: 1; }
     .about .card:hover {
       --color-box-shadow: rgba(0, 0, 0, 0.17); }
     @media only screen and (min-width: 769px) {
       .about .card {
-        --column-gap: 0; } }
+        --column-gap: $gap-l; } }
     @media only screen and (min-width: 1367px) {
       .about .card {
         padding: 2.4rem;
@@ -1283,6 +1285,9 @@ div[style*="color: rgb(0, 0, 0);"]:before {
       align-content: normal;
       justify-content: var(--justify-content);
       gap: 0; }
+      .about .card__bottom a {
+        font-family: open-sans,sans-serif;
+        font-size: 20px; }
       .about .card__bottom p {
         font-family: var(--font-title);
         font-size: 1.5em;

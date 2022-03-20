@@ -173,6 +173,7 @@
       var(--align-content)
     );
     @include box-shadow();
+    position: relative;
     max-width: 425px;
     padding: $gap-l;
     background-color: var(--color-white);
@@ -183,8 +184,9 @@
     transform: translateY(var(--trans-y));
     transition: opacity var(--trans-time) var(--trans-fnc),
       transform var(--trans-time) var(--trans-fnc);
+    z-index: 1;
     @include res-min-tablet {
-      --column-gap: 0;
+      --column-gap: $gap-l;
     }
     @include res-min-desktop-m {
       padding: $gap-xl;
@@ -231,6 +233,11 @@
         $flow: var(--flow)
       );
       
+      a{
+        font-family: open-sans,sans-serif;
+        font-size: 20px;
+      }
+
       p {
         font-family: var(--font-title);
         font-size: 1.5em;
