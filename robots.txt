@@ -3,4 +3,4 @@ User-agent: *
 Allow: *.js
 Allow: *.css
 
-Sitemap: https://http://ctscorp.cz/sitemap.xml
+Sitemap: https://http://dlc.cz/sitemap.xml

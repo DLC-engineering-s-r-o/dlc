@@ -1253,7 +1253,7 @@ div[style*="color: rgb(0, 0, 0);"]:before {
       --color-box-shadow: rgba(0, 0, 0, 0.17); }
     @media only screen and (min-width: 769px) {
       .about .card {
-        --column-gap: $gap-l; } }
+        --column-gap: 1.6rem; } }
     @media only screen and (min-width: 1367px) {
       .about .card {
         padding: 2.4rem;

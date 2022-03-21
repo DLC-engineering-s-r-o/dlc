@@ -186,7 +186,7 @@
       transform var(--trans-time) var(--trans-fnc);
     z-index: 1;
     @include res-min-tablet {
-      --column-gap: $gap-l;
+      --column-gap: #{$gap-l};
     }
     @include res-min-desktop-m {
       padding: $gap-xl;
