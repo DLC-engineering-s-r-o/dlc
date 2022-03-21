@@ -1,7 +1,5 @@
 @import "../base/global";
 
-@import "../base/global";
-
 .header {
   --anim-length: 0.7s;
   --anim-delay: calc(var(--anim-length) / 2);
@@ -135,37 +133,6 @@
       }
     }
   }
-
-  // &__bg {
-  //   --bg-min-height: 0;
-  //   width: 100%;
-  //   min-height: var(--bg-min-height);
-  //   background-image: image-set(
-  //     "../images/backgrounds/bg_managment.png" 1x,
-  //     "../images/backgrounds/bg_managment.png" 2x
-  //   );
-  //   background-repeat: no-repeat;
-  //   background-position: right bottom;
-  //   opacity: 0;
-  //   animation: showImage 1s linear forwards;
-  //   transform: scale(0.9, 0.9);
-  //   z-index: 1;
-  //   background-size: contain;
-
-  //   @include res-min-tablet {
-  //     background-image: image-set(
-  //       "../images/backgrounds/bg_managment.png" 1x,
-  //       "../images/backgrounds/bg_managment.png" 1x
-  //     );
-  //   }
-
-  //   @include res-max-mobile-l {
-  //     --bg-min-height: 55vh;
-  //     position: absolute;
-  //     bottom: 0;
-  //     left: 0;
-  //   }
-  // }
 }
 
 @keyframes showRight {

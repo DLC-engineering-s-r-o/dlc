@@ -1476,6 +1476,9 @@ div[style*="color: rgb(0, 0, 0);"]:before {
       font-family: inherit; }
     .header-guidepost__content .desc {
       --desc-font-size: 18px; }
+      @media only screen and (max-width: 1024px) {
+        .header-guidepost__content .desc {
+          --desc-font-size: 16px; } }
 
 .wrapper-guidepost {
   min-height: 100vh; }
@@ -1501,6 +1504,14 @@ div[style*="color: rgb(0, 0, 0);"]:before {
   --pb: 2rem;
   padding-top: var(--pt);
   padding-bottom: var(--pb); }
+  @media only screen and (max-width: 1024px) {
+    .guidepost {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: stretch;
+      align-content: normal;
+      justify-content: center;
+      gap: 0; } }
   .guidepost .redirect-card-wrapper {
     --column: 1fr;
     --column-gap: 2.4rem;
@@ -1521,7 +1532,7 @@ div[style*="color: rgb(0, 0, 0);"]:before {
         --column: 1fr 1fr 1fr; } }
   .guidepost .redirect-card {
     --box-gap: 3.2rem;
-    --padding: 3.2rem 0.8rem;
+    --padding: 3.2rem 1.6rem;
     --align-items: center;
     --justify-content: normal;
     --align-content: center;
@@ -1539,11 +1550,18 @@ div[style*="color: rgb(0, 0, 0);"]:before {
     box-shadow: 30px 30px 75px 0 var(--color-box-shadow); }
     .guidepost .redirect-card:hover {
       --color-box-shadow: rgba(0, 0, 0, 0.17); }
+    @media only screen and (max-width: 1024px) {
+      .guidepost .redirect-card {
+        --box-gap: 2.4rem;
+        max-width: 280px; } }
     .guidepost .redirect-card:hover {
       --color-box-shadow: hsla(0, 0%, 0%, 0.3); }
     .guidepost .redirect-card__top > svg {
       max-width: 9em;
       height: auto; }
+      @media only screen and (max-width: 1024px) {
+        .guidepost .redirect-card__top > svg {
+          max-width: 5em; } }
     .guidepost .redirect-card__center {
       font-size: 10px;
       text-align: center; }
@@ -1554,6 +1572,10 @@ div[style*="color: rgb(0, 0, 0);"]:before {
         font-weight: 500;
         color: var(--color-primary);
         white-space: nowrap; }
+        @media only screen and (max-width: 1024px) {
+          .guidepost .redirect-card__center > .title {
+            margin-bottom: 0.4em;
+            font-size: 3.5em; } }
         .guidepost .redirect-card__center > .title--yellow {
           color: var(--color-yellow); }
       .guidepost .redirect-card__center > small {

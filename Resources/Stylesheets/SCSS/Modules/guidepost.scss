@@ -6,7 +6,7 @@
   @include res-min-mobile-l {
     --pb: 8rem;
   }
-  
+
   &__logo {
     --pt: 3rem;
     --pb: 2rem;
@@ -23,7 +23,7 @@
       transform: translate(-50%, -50%);
     }
 
-    svg{
+    svg {
       max-height: 170px;
     }
   }
@@ -48,8 +48,11 @@
       font-family: inherit;
     }
 
-    .desc{
+    .desc {
       --desc-font-size: 18px;
+      @include res-max-desktop-s {
+        --desc-font-size: 16px;
+      }
     }
   }
 }
@@ -77,10 +80,13 @@
 }
 
 .guidepost {
-    --pt: 2rem;
-    --pb: 2rem;
-    padding-top: var(--pt);
-    padding-bottom: var(--pb);
+  --pt: 2rem;
+  --pb: 2rem;
+  padding-top: var(--pt);
+  padding-bottom: var(--pb);
+  @include res-max-desktop-s {
+    @include flex-set($justify-content: center);
+  }
 
   .redirect-card-wrapper {
     --column: 1fr;
@@ -103,10 +109,10 @@
       --column: 1fr 1fr 1fr;
     }
   }
- 
+
   .redirect-card {
     --box-gap: #{$gap-xxl};
-    --padding: #{$gap-xxl} #{$gap};
+    --padding: #{$gap-xxl} #{$gap-l};
     --align-items: center;
     --justify-content: normal;
     --align-content: center;
@@ -114,7 +120,7 @@
     background: var(--color-white);
     border-radius: var(--gap-xl);
     font-size: 10px;
-    text-decoration: none;    
+    text-decoration: none;
 
     @include flex-set(
       def,
@@ -127,6 +133,11 @@
     );
     @include box-shadow();
 
+    @include res-max-desktop-s {
+      --box-gap: 2.4rem;
+      max-width: 280px;
+    }
+
     &:hover {
       --color-box-shadow: hsla(0, 0%, 0%, 0.3);
     }
@@ -135,6 +146,9 @@
       > svg {
         max-width: 9em;
         height: auto;
+        @include res-max-desktop-s {
+          max-width: 5em;
+        }
       }
     }
 
@@ -149,6 +163,10 @@
         font-weight: 500;
         color: var(--color-primary);
         white-space: nowrap;
+        @include res-max-desktop-s {
+          margin-bottom: 0.4em;
+          font-size: 3.5em;
+        }
 
         &--yellow {
           color: var(--color-yellow);
