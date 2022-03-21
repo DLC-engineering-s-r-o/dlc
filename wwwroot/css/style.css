@@ -795,7 +795,7 @@ footer {
     content: "";
     width: 51%;
     height: 100%;
-    background-image: image-set("../images/backgrounds/bg_managment_960.png" 1x, "../images/backgrounds/bg_managment.png" 2x);
+    background-image: image-set("../images/backgrounds/bg_managment_960.webp" 1x, "../images/backgrounds/bg_managment_1920.webp" 2x);
     background-repeat: no-repeat;
     background-position: right 100% top 100%;
     background-size: cover; }
