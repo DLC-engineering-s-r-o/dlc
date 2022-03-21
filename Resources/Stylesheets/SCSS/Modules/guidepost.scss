@@ -67,7 +67,10 @@
     content: "";
     width: 100%;
     height: 100%;
-    background-image: url("../images/backgrounds/main-bg.png");
+    // background-image: image-set(
+    //   "../images/backgrounds/header-bg_1024.webp" 1x,
+    //   "../images/backgrounds/header-bg_1920.webp" 2x
+    // );
     background-image: url("../images/backgrounds/main-bg.webp");
     background-repeat: no-repeat;
     background-position: center;

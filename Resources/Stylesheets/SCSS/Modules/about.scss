@@ -270,7 +270,11 @@
     &__top {
       --justify-content: center;
       display: flex;
-      @include flex-set($justify-content: var(--justify-content));      
+      @include flex-set($justify-content: var(--justify-content));   
+      
+      > svg{
+        max-width: 220px;
+      }
     }
   }
 

@@ -795,11 +795,14 @@ footer {
     content: "";
     width: 51%;
     height: 100%;
-    background-image: image-set("../images/backgrounds/bg_managment.png" 1x, "../images/backgrounds/bg_managment.png" 2x);
-    background-image: image-set("../images/backgrounds/bg_managment.png" 1x, "../images/backgrounds/bg_managment.png" 2x);
+    background-image: image-set("../images/backgrounds/bg_managment_960.png" 1x, "../images/backgrounds/bg_managment.png" 2x);
     background-repeat: no-repeat;
     background-position: right 100% top 100%;
     background-size: cover; }
+    @media only screen and (max-width: 425px) {
+      .header:after {
+        width: 36%;
+        background-image: image-set("../images/backgrounds/bg_managment_480.webp" 1x, "../images/backgrounds/bg_managment_960.webp" 2x); } }
   .header__container {
     --container-max-width: 1366px;
     --col-count: 2;
@@ -1323,6 +1326,8 @@ div[style*="color: rgb(0, 0, 0);"]:before {
       align-content: normal;
       justify-content: var(--justify-content);
       gap: 0; }
+      .about .card__top > svg {
+        max-width: 220px; }
   .about .icon-wrapper {
     position: relative;
     display: block;
@@ -1489,7 +1494,6 @@ div[style*="color: rgb(0, 0, 0);"]:before {
     content: "";
     width: 100%;
     height: 100%;
-    background-image: url("../images/backgrounds/main-bg.png");
     background-image: url("../images/backgrounds/main-bg.webp");
     background-repeat: no-repeat;
     background-position: center;
