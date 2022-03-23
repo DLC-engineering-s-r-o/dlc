@@ -60,6 +60,24 @@
 .wrapper-guidepost {
   min-height: 100vh;
 
+  &:before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/logos/dlc-group-logo_big.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--color-white);
+    background-attachment: fixed;
+    animation: hide 0.5s forwards;
+    animation-delay: 1.5s;
+    z-index: 10;
+  }
+
   &:after {
     position: absolute;
     top: 0;
@@ -196,5 +214,15 @@
         }
       }
     }
+  }
+}
+
+@keyframes hide {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
   }
 }
