@@ -161,9 +161,8 @@
     --trans-y: -1rem;
     --column: 1fr;
     --column-gap: #{$gap-l};
-    --align-content: flex-start;
+    --align-content: center;
     --justify-content: center;
-    --align-content: flex-start;
     @include grid-columns(
       def,
       var(--column),
@@ -273,7 +272,7 @@
       @include flex-set($justify-content: var(--justify-content));   
       
       > img{
-        max-width: 220px;
+        max-height: 120px;
       }
     }
   }

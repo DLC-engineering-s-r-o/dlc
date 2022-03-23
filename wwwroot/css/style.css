@@ -1231,9 +1231,8 @@ div[style*="color: rgb(0, 0, 0);"]:before {
     --trans-y: -1rem;
     --column: 1fr;
     --column-gap: 1.6rem;
-    --align-content: flex-start;
+    --align-content: center;
     --justify-content: center;
-    --align-content: flex-start;
     display: grid;
     gap: var(--column-gap);
     align-items: var(--align-items);
@@ -1327,7 +1326,7 @@ div[style*="color: rgb(0, 0, 0);"]:before {
       justify-content: var(--justify-content);
       gap: 0; }
       .about .card__top > img {
-        max-width: 220px; }
+        max-height: 120px; }
   .about .icon-wrapper {
     position: relative;
     display: block;
