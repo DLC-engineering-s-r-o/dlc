@@ -1326,7 +1326,7 @@ div[style*="color: rgb(0, 0, 0);"]:before {
       align-content: normal;
       justify-content: var(--justify-content);
       gap: 0; }
-      .about .card__top > svg {
+      .about .card__top > img {
         max-width: 220px; }
   .about .icon-wrapper {
     position: relative;
@@ -1370,7 +1370,7 @@ div[style*="color: rgb(0, 0, 0);"]:before {
     margin-bottom: 1.6rem; }
   .services__content {
     --column: 1fr;
-    --column-gap: 0.8rem;
+    --column-gap: 1.6rem;
     --align-items: start;
     --justify-content: center;
     --align-content: stretch;
@@ -1404,7 +1404,7 @@ div[style*="color: rgb(0, 0, 0);"]:before {
     @media only screen and (max-width: 1366px) {
       .services__content img {
         width: 100%;
-        max-width: 320px; } }
+        max-width: 200px; } }
     .services__content h3 {
       margin-bottom: var(--gap);
       font-size: 2rem; }

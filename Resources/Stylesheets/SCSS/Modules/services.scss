@@ -24,7 +24,7 @@
 
   &__content {
     --column: 1fr;
-    --column-gap: #{$gap};
+    --column-gap: #{$gap-l};
     --align-items: start;
     --justify-content: center;
     --align-content: stretch;
@@ -68,7 +68,7 @@
     img {
       @include res-max-desktop-m {
         width: 100%;
-        max-width: 320px;
+        max-width: 200px;
       }
     }
 

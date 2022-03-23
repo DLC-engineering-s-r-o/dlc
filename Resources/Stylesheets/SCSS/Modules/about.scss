@@ -272,7 +272,7 @@
       display: flex;
       @include flex-set($justify-content: var(--justify-content));   
       
-      > svg{
+      > img{
         max-width: 220px;
       }
     }
