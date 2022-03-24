@@ -1466,9 +1466,9 @@ div[style*="color: rgb(0, 0, 0);"]:before {
       max-height: 170px; }
   .header-guidepost__content {
     --space-gap: 1.6rem;
-    --align-items: flex-start;
+    --align-items: center;
     --justify-content: normal;
-    --align-content: flex-start;
+    --align-content: center;
     display: flex;
     flex-flow: column wrap;
     align-items: var(--align-items);

@@ -30,9 +30,9 @@
 
   &__content {
     --space-gap: #{$gap-l};
-    --align-items: flex-start;
+    --align-items: center;
     --justify-content: normal;
-    --align-content: flex-start;    
+    --align-content: center; 
     @include flex-set(
       def, column, wrap, var(--space-gap), var(--align-items), var(--justify-content), var(--align-content)
     );
