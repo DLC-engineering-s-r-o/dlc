@@ -32,17 +32,11 @@
     --space-gap: #{$gap-l};
     --align-items: flex-start;
     --justify-content: normal;
-    --align-content: flex-start;
-    font-family: var(--font-text);
+    --align-content: flex-start;    
     @include flex-set(
-      def,
-      column,
-      wrap,
-      var(--space-gap),
-      var(--align-items),
-      var(--justify-content),
-      var(--align-content)
+      def, column, wrap, var(--space-gap), var(--align-items), var(--justify-content), var(--align-content)
     );
+    font-family: var(--font-text);
 
     strong {
       font-family: inherit;
@@ -60,7 +54,7 @@
 .wrapper-guidepost {
   min-height: 100vh;
 
-  &:before{
+  &:before {
     position: absolute;
     top: 0;
     left: 0;
@@ -73,6 +67,7 @@
     background-position: center;
     background-color: var(--color-white);
     background-attachment: fixed;
+    opacity: 1;
     animation: hide 0.5s forwards;
     animation-delay: 1.5s;
     z-index: 10;
@@ -103,11 +98,9 @@
 .guidepost {
   --pt: 2rem;
   --pb: 2rem;
+  @include flex-set($justify-content: center);
   padding-top: var(--pt);
   padding-bottom: var(--pb);
-  @include res-max-desktop-s {
-    @include flex-set($justify-content: center);
-  }
 
   .redirect-card-wrapper {
     --column: 1fr;
@@ -137,12 +130,9 @@
     --align-items: center;
     --justify-content: normal;
     --align-content: center;
-    padding: var(--padding);
-    background: var(--color-white);
-    border-radius: var(--gap-xl);
-    font-size: 10px;
-    text-decoration: none;
-
+    --shadow-alpha: .15;
+    --logo-scale: 1;
+    --box-gap: 2.4rem;
     @include flex-set(
       def,
       column,
@@ -152,24 +142,31 @@
       var(--justify-content),
       var(--align-content)
     );
-    @include box-shadow();
+    @include box-shadow(var(--shadow-alpha), 0, 0);    
+    max-width: 280px;
+    padding: var(--padding);
+    background: var(--color-white);
+    border-radius: var(--gap-xl);
+    font-size: 10px;
+    text-decoration: none;
+    transition: box-shadow var(--trans-time) ease-in-out;
 
-    @include res-max-desktop-s {
-      --box-gap: 2.4rem;
-      max-width: 280px;
-    }
+    &:hover{
+      --shadow-alpha: .3;
+      --logo-scale: 1.1;
 
-    &:hover {
-      --color-box-shadow: hsla(0, 0%, 0%, 0.3);
+      @include res-max-tablet{
+        --shadow-alpha: .15;
+        --logo-scale: 1;
+      }
     }
 
     &__top {
       > svg {
-        max-width: 9em;
+        max-width: 5em;
         height: auto;
-        @include res-max-desktop-s {
-          max-width: 5em;
-        }
+        transform: scale(var(--logo-scale), var(--logo-scale));
+        transition: transform var(--trans-time) ease-in-out;        
       }
     }
 
@@ -178,16 +175,12 @@
       text-align: center;
 
       > .title {
-        margin-bottom: 0.6em;
+        margin-bottom: 0.4em;
         font-family: var(--font-title);
-        font-size: 4em;
+        font-size: 3.5em;
         font-weight: 500;
         color: var(--color-primary);
-        white-space: nowrap;
-        @include res-max-desktop-s {
-          margin-bottom: 0.4em;
-          font-size: 3.5em;
-        }
+        white-space: nowrap;        
 
         &--yellow {
           color: var(--color-yellow);
@@ -220,9 +213,15 @@
 @keyframes hide {
   from {
     opacity: 1;
+    z-index: 10;
   }
 
+  99% {
+    opacity: 0;
+    z-index: 10;
+  }
   to {
     opacity: 0;
+    z-index: -10;
   }
 }
