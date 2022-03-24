@@ -96,8 +96,8 @@
 }
 
 .guidepost {
-  --pt: 2rem;
-  --pb: 2rem;
+  --pt: 4rem;
+  --pb: 4rem;
   @include flex-set($justify-content: center);
   padding-top: var(--pt);
   padding-bottom: var(--pb);

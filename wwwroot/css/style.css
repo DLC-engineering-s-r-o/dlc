@@ -1520,8 +1520,8 @@ div[style*="color: rgb(0, 0, 0);"]:before {
     background-size: cover; }
 
 .guidepost {
-  --pt: 2rem;
-  --pb: 2rem;
+  --pt: 4rem;
+  --pb: 4rem;
   display: flex;
   flex-flow: row nowrap;
   align-items: stretch;
