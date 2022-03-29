@@ -1,9 +1,11 @@
-﻿import { initNav } from "./navigation";
-import { initAnim } from "./boxAnim";
-import { setCurentYear } from "./year";
+﻿import { initNav } from "./navigation"
+import { initAnim } from "./boxAnim"
+import { setCurentYear } from "./year"
+import { initEmail } from "./email"
 
-document.addEventListener("DOMContentLoaded", function () {
-  initNav();
-  initAnim();
-  setCurentYear();
-});
+document.addEventListener("DOMContentLoaded", () => {
+  initNav()
+  initAnim()
+  setCurentYear()
+  initEmail()
+})

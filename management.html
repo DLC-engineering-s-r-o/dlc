@@ -375,14 +375,10 @@
               Vyplňte formulář a náš tým se vám ozve zpět do 24 hodin.
             </p>
           </div>
-          <form name="contactform" method="post">
-            <div class="form__element">
-              <label for="fName">Jméno *</label>
-              <input type="text" id="fName" name="fname" required />
-            </div>
-            <div class="form__element">
-              <label for="lName">Příjmení *</label>
-              <input type="text" id="lName" name="lname" required />
+          <form method="dialog">
+            <div class="form__element form__element--full">
+              <label for="fullName">Jméno a příjmení *</label>
+              <input type="text" id="fullName" name="fullname" required />
             </div>
             <div class="form__element">
               <label for="email">Email *</label>
@@ -394,9 +390,9 @@
             </div>
             <div class="form__element form__element--full">
               <label for="msg">Vaše zpráva *</label>
-              <textarea id="msg" name="mesage" rows="10" name="comments" required></textarea>
+              <textarea id="msg" name="mesage" rows="10" required></textarea>
             </div>
-            <button type="submit" aria-label="Submit button" class="button">
+            <button aria-label="Submit button" class="button" id="submitBtn">
               Odeslat
             </button>
           </form>
@@ -404,12 +400,12 @@
         <div class="contact__title">
           <h2 class="title">
             <strong>Kontaktní informace</strong>
-            CTS corp., s.r.o.
+            DLC management s.r.o.
           </h2>
           <div class="contact__address">
             <div>
-              <p><span>IČ: </span>27099873</p>
-              <p><span>DIČ: </span>CZ27099873</p>
+              <p><span>IČ: </span>02915065</p>
+              <p><span>DIČ: </span>CZ02915065</p>
             </div>
             <div>
               <div class="inline-flex gap gap--s">
