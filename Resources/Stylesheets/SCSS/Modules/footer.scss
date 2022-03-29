@@ -1,9 +1,9 @@
 @import "../base/global";
 
 footer {
-  padding: 0 1rem;
+  padding: $gap-l $gap;
   color: var(--color-black);
-
+  text-align: center;
   a {
     color: var(--color-secondary);
   }
@@ -27,11 +27,4 @@ footer {
   @include res-min-desktop-l {
     --gap-section: 15rem;
   }
-}
-
-.footer-guidepost {
-  --gap-section: 8rem;
-  padding-top: var(--gap-section);
-  padding-bottom: var(--gap-xxl);
-  text-align: center;
 }

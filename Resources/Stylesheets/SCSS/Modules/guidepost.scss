@@ -1,11 +1,6 @@
 @import "../base/global";
 
 .header-guidepost {
-  --pb: 6rem;
-  padding-bottom: var(--pb);
-  @include res-min-mobile-l {
-    --pb: 8rem;
-  }
 
   &__logo {
     --pt: 3rem;
@@ -32,9 +27,15 @@
     --space-gap: #{$gap-l};
     --align-items: center;
     --justify-content: normal;
-    --align-content: center; 
+    --align-content: center;
     @include flex-set(
-      def, column, wrap, var(--space-gap), var(--align-items), var(--justify-content), var(--align-content)
+      def,
+      column,
+      wrap,
+      var(--space-gap),
+      var(--align-items),
+      var(--justify-content),
+      var(--align-content)
     );
     font-family: var(--font-text);
 
@@ -101,8 +102,46 @@
   @include flex-set($justify-content: center);
   padding-top: var(--pt);
   padding-bottom: var(--pb);
+}
 
-  .redirect-card-wrapper {
+.redirect-card {
+  --box-gap: #{$gap-xxl};
+  --padding: #{$gap-xxl} #{$gap-l};
+  --align-items: center;
+  --justify-content: normal;
+  --align-content: center;
+  --shadow-alpha: 0.15;
+  --logo-scale: 1;
+  --box-gap: 2.4rem;
+  @include flex-set(
+    def,
+    column,
+    nowrap,
+    var(--box-gap),
+    var(--align-items),
+    var(--justify-content),
+    var(--align-content)
+  );
+  @include box-shadow(var(--shadow-alpha), 0, 0);
+  max-width: 280px;
+  padding: var(--padding);
+  background: var(--color-white);
+  border-radius: var(--gap-xl);
+  font-size: 10px;
+  text-decoration: none;
+  transition: box-shadow var(--trans-time) ease-in-out;
+
+  &:hover {
+    --shadow-alpha: 0.3;
+    --logo-scale: 1.1;
+
+    @include res-max-tablet {
+      --shadow-alpha: 0.15;
+      --logo-scale: 1;
+    }
+  }
+
+  &__wrapper {
     --column: 1fr;
     --column-gap: #{$gap-xl};
     --align-content: flex-start;
@@ -124,87 +163,49 @@
     }
   }
 
-  .redirect-card {
-    --box-gap: #{$gap-xxl};
-    --padding: #{$gap-xxl} #{$gap-l};
-    --align-items: center;
-    --justify-content: normal;
-    --align-content: center;
-    --shadow-alpha: .15;
-    --logo-scale: 1;
-    --box-gap: 2.4rem;
-    @include flex-set(
-      def,
-      column,
-      nowrap,
-      var(--box-gap),
-      var(--align-items),
-      var(--justify-content),
-      var(--align-content)
-    );
-    @include box-shadow(var(--shadow-alpha), 0, 0);    
-    max-width: 280px;
-    padding: var(--padding);
-    background: var(--color-white);
-    border-radius: var(--gap-xl);
+  &__top {
+    > svg {
+      max-width: 5em;
+      height: auto;
+      transform: scale(var(--logo-scale), var(--logo-scale));
+      transition: transform var(--trans-time) ease-in-out;
+    }
+  }
+
+  &__center {
     font-size: 10px;
-    text-decoration: none;
-    transition: box-shadow var(--trans-time) ease-in-out;
+    text-align: center;
 
-    &:hover{
-      --shadow-alpha: .3;
-      --logo-scale: 1.1;
+    > .title {
+      margin-bottom: 0.4em;
+      font-family: var(--font-title);
+      font-size: 3.5em;
+      font-weight: 500;
+      color: var(--color-primary);
+      white-space: nowrap;
 
-      @include res-max-tablet{
-        --shadow-alpha: .15;
-        --logo-scale: 1;
+      &--yellow {
+        color: var(--color-yellow);
       }
     }
 
-    &__top {
-      > svg {
-        max-width: 5em;
-        height: auto;
-        transform: scale(var(--logo-scale), var(--logo-scale));
-        transition: transform var(--trans-time) ease-in-out;        
-      }
+    > small {
+      font-size: 1.7em;
+      line-height: 1.4;
+      color: var(--color-secondary);
     }
+  }
 
-    &__center {
-      font-size: 10px;
-      text-align: center;
+  &__bottom {
+    font-size: 10px;
 
-      > .title {
-        margin-bottom: 0.4em;
-        font-family: var(--font-title);
-        font-size: 3.5em;
-        font-weight: 500;
-        color: var(--color-primary);
-        white-space: nowrap;        
+    > span {
+      font-size: 1.7em;
+      color: var(--color-primary);
+      text-transform: uppercase;
 
-        &--yellow {
-          color: var(--color-yellow);
-        }
-      }
-
-      > small {
-        font-size: 1.7em;
-        line-height: 1.4;
-        color: var(--color-secondary);
-      }
-    }
-
-    &__bottom {
-      font-size: 10px;
-
-      > span {
-        font-size: 1.7em;
-        color: var(--color-primary);
-        text-transform: uppercase;
-
-        &:hover {
-          text-decoration: underline;
-        }
+      &:hover {
+        text-decoration: underline;
       }
     }
   }
