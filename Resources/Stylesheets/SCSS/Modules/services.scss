@@ -36,7 +36,7 @@
       var(--justify-content),
       var(--align-content)
     );
-
+    scroll-margin-top: var(--nav-height);
     @include res-min-tablet {
       --column: 2fr 1fr;
       --column-gap: #{$gap-xl};

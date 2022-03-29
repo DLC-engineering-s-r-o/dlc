@@ -1323,7 +1323,7 @@ div[style*="color: rgb(0, 0, 0);"]:before {
       justify-content: var(--justify-content);
       gap: 0; }
       .about .card__top > img {
-        max-height: 120px; }
+        max-height: 100px; }
   .about .icon-wrapper {
     position: relative;
     display: block;
@@ -1375,7 +1375,8 @@ div[style*="color: rgb(0, 0, 0);"]:before {
     align-items: var(--align-items);
     align-content: var(--align-content);
     justify-content: var(--justify-content);
-    grid-template-columns: var(--column); }
+    grid-template-columns: var(--column);
+    scroll-margin-top: var(--nav-height); }
     @media only screen and (min-width: 769px) {
       .services__content {
         --column: 2fr 1fr;
