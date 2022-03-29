@@ -35,7 +35,7 @@ export function initEmail() {
         setEmailContent()
 
         if (fullName != '' && email != '' && message != '') {
-            window.location.href = `https://dlcafsendgrid20220328153355.azurewebsites.net/api/SendEmail?body=${message}&sender=${fullName}&website=${website}&phone=${phone}`
+            window.location.href = `https://dlcafsendgrid20220328153355.azurewebsites.net/api/SendEmail?sender=${fullName}&email=${email}&phone=${phone}&body=${message}&website=${website}`
         }
 
         else console.log('%cPlease fill in the required fields!', 'color:red;')
