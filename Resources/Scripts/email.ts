@@ -9,7 +9,7 @@ export function initEmail() {
     let email = ''
     let phone = ''
     let message = ''
-    let website = 'ctscorp.cz'
+    let website = 'DLC management'
 
     function setEmailContent() {
 
