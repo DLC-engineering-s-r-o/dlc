@@ -6,7 +6,7 @@
   --btn-bg-color: var(--color-black);
   --btn-border-color: var(--color-black);
   --btn-trans-y: 0;
-  --shadow-alpha:.17;
+  --shadow-alpha:.15;
   @include flex-set(inline, row, nowrap, var(--gap-s), center, center, center);
   @include border("def", var(--border-width), var(--btn-border-color));
   @include box-shadow(var(--shadow-alpha),0, $gap-s, $gap);
@@ -28,13 +28,24 @@
 
   &:hover {
     --btn-trans-y: -5%;
+    --shadow-alpha:.3;
     @include res-max-tablet{
       --btn-trans-y: 0;
+      --shadow-alpha:.15;
     }
   }
 
   &--secondary {
     --btn-color: var(--color-black);
     --btn-bg-color: var(--color-trans);
+  }
+
+  &[disabled]{
+    --btn-bg-color: var(--color-disabled);
+    --btn-cursor: not-allowed;
+    &:hover{
+      --shadow-alpha:.15;
+      --btn-trans-y: 0;
+    }
   }
 }

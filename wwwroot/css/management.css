@@ -11,6 +11,7 @@
   --color-secondary: #424243;
   --color-box-shadow: rgba(0, 0, 0, 0.17);
   --color-yellow: #fdba12;
+  --color-disabled: gray;
   --trans-time: 0.25s;
   --trans-fnc: ease-in-out;
   --gap-xxl: 3.2rem;
@@ -443,6 +444,12 @@ small {
   .button--secondary {
     --btn-color: var(--color-black);
     --btn-bg-color: var(--color-trans); }
+  .button[disabled] {
+    --btn-bg-color: var(--color-disabled);
+    --btn-cursor: not-allowed; }
+    .button[disabled]:hover {
+      --shadow-alpha:.15;
+      --btn-trans-y: 0; }
 
 .burger {
   width: 50px;

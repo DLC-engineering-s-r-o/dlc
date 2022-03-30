@@ -11,6 +11,7 @@
   --color-secondary: #424243;
   --color-box-shadow: rgba(0, 0, 0, 0.17);
   --color-yellow: #fdba12;
+  --color-disabled: gray;
   --trans-time: 0.25s;
   --trans-fnc: ease-in-out;
   --gap-xxl: 3.2rem;
