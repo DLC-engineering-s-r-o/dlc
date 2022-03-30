@@ -413,7 +413,7 @@ small {
   --btn-bg-color: var(--color-black);
   --btn-border-color: var(--color-black);
   --btn-trans-y: 0;
-  --shadow-alpha:.17;
+  --shadow-alpha:.15;
   display: inline-flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -437,10 +437,12 @@ small {
   transition: transform var(--trans-time) ease-in-out, box-shadow var(--trans-time) ease-in-out;
   cursor: pointer; }
   .button:hover {
-    --btn-trans-y: -5%; }
+    --btn-trans-y: -5%;
+    --shadow-alpha:.3; }
     @media only screen and (max-width: 768px) {
       .button:hover {
-        --btn-trans-y: 0; } }
+        --btn-trans-y: 0;
+        --shadow-alpha:.15; } }
   .button--secondary {
     --btn-color: var(--color-black);
     --btn-bg-color: var(--color-trans); }
