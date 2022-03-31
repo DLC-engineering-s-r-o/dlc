@@ -1512,6 +1512,9 @@ div[style*="color: rgb(0, 0, 0);"]:before {
     animation: hide 0.5s forwards;
     animation-delay: 1.5s;
     z-index: 10; }
+    @media only screen and (max-width: 768px) {
+      .wrapper-guidepost:before {
+        background-size: 200px; } }
   .wrapper-guidepost:after {
     position: absolute;
     top: 0;
@@ -1571,7 +1574,7 @@ div[style*="color: rgb(0, 0, 0);"]:before {
         --shadow-alpha: 0.15;
         --logo-scale: 1; } }
   .redirect-card__wrapper {
-    --column: 1fr;
+    --col-count: 3;
     --column-gap: 2.4rem;
     --align-content: flex-start;
     --justify-content: normal;
@@ -1581,13 +1584,16 @@ div[style*="color: rgb(0, 0, 0);"]:before {
     align-items: var(--align-items);
     align-content: var(--align-content);
     justify-content: var(--justify-content);
-    grid-template-columns: var(--column); }
-    @media only screen and (min-width: 426px) {
+    grid-template-columns: repeat(var(--col-count), minmax(1.6rem, 1fr)); }
+    @media only screen and (max-width: 768px) {
       .redirect-card__wrapper {
-        --column: 1fr 1fr; } }
-    @media only screen and (min-width: 769px) {
+        --column-gap: 1.6rem; } }
+    @media only screen and (max-width: 767px) {
       .redirect-card__wrapper {
-        --column: 1fr 1fr 1fr; } }
+        --col-count: 2; } }
+    @media only screen and (max-width: 425px) {
+      .redirect-card__wrapper {
+        --col-count: 1; } }
   .redirect-card__top > svg {
     max-width: 5em;
     height: auto;
@@ -1603,6 +1609,9 @@ div[style*="color: rgb(0, 0, 0);"]:before {
       font-weight: 500;
       color: var(--color-primary);
       white-space: nowrap; }
+      @media only screen and (max-width: 768px) {
+        .redirect-card__center > .title {
+          font-size: 3.2em; } }
       .redirect-card__center > .title--yellow {
         color: var(--color-yellow); }
     .redirect-card__center > small {
@@ -1615,6 +1624,9 @@ div[style*="color: rgb(0, 0, 0);"]:before {
       font-size: 1.7em;
       color: var(--color-primary);
       text-transform: uppercase; }
+      @media only screen and (max-width: 768px) {
+        .redirect-card__bottom > span {
+          font-size: 1.5em; } }
       .redirect-card__bottom > span:hover {
         text-decoration: underline; }
 
