@@ -180,6 +180,7 @@
     opacity: var(--card-opacity);
     border-radius: var(--gap);
     text-align: center;
+    text-decoration: none;
     transform: translateY(var(--trans-y));
     transition: opacity var(--trans-time) var(--trans-fnc),
       transform var(--trans-time) var(--trans-fnc);
@@ -194,6 +195,9 @@
     @include res-min-desktop-l {
       padding: $gap-xl;
       margin-left: 2rem;
+    }
+    &:hover .link--primary{
+      --text-decoration: underline;
     }
 
     &--span {
@@ -225,17 +229,11 @@
     &__bottom {
       --justify-content: center;
       --flow: column;
-      flex-direction: column;
       text-align: center;
       @include flex-set(
         $justify-content: var(--justify-content),
         $flow: var(--flow)
       );
-      
-      a{
-        font-family: open-sans,sans-serif;
-        font-size: 20px;
-      }
 
       p {
         font-family: var(--font-title);
@@ -247,7 +245,7 @@
         }
       }
 
-      span {
+      span:not(.link) {
         font-family: var(--font-title);
         font-size: 2em;
         font-weight: 600;

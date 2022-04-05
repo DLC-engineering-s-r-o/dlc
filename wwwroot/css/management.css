@@ -524,10 +524,17 @@ small {
   fill: currentColor; }
 
 .link {
+  --link-color: white;
   font-family: "open-sans", sans-serif;
-  font-size: medium;
+  font-size: var(--font-fsize, medium);
   letter-spacing: 1.5px;
-  color: white; }
+  color: var(--link-color);
+  text-decoration: var(--text-decoration, none); }
+  .link:hover {
+    --text-decoration: underline; }
+  .link--primary {
+    --link-color: #68a4d9;
+    --font-fsize: large; }
 
 a[href*="mailto"]:hover, a[href*="tel"]:hover {
   text-decoration: underline; }
@@ -1265,6 +1272,7 @@ div[style*="color: rgb(0, 0, 0);"]:before {
     opacity: var(--card-opacity);
     border-radius: var(--gap);
     text-align: center;
+    text-decoration: none;
     transform: translateY(var(--trans-y));
     transition: opacity var(--trans-time) var(--trans-fnc), transform var(--trans-time) var(--trans-fnc);
     z-index: 1; }
@@ -1279,6 +1287,8 @@ div[style*="color: rgb(0, 0, 0);"]:before {
       .about .card {
         padding: 2.4rem;
         margin-left: 2rem; } }
+    .about .card:hover .link--primary {
+      --text-decoration: underline; }
     @media only screen and (min-width: 321px) {
       .about .card--span {
         grid-column: span 2; } }
@@ -1297,7 +1307,6 @@ div[style*="color: rgb(0, 0, 0);"]:before {
     .about .card__bottom {
       --justify-content: center;
       --flow: column;
-      flex-direction: column;
       text-align: center;
       display: flex;
       flex-flow: var(--flow) nowrap;
@@ -1305,9 +1314,6 @@ div[style*="color: rgb(0, 0, 0);"]:before {
       align-content: normal;
       justify-content: var(--justify-content);
       gap: 0; }
-      .about .card__bottom a {
-        font-family: open-sans,sans-serif;
-        font-size: 20px; }
       .about .card__bottom p {
         font-family: var(--font-title);
         font-size: 1.5em;
@@ -1316,20 +1322,20 @@ div[style*="color: rgb(0, 0, 0);"]:before {
         @media only screen and (min-width: 1025px) {
           .about .card__bottom p {
             font-size: 2em; } }
-      .about .card__bottom span {
+      .about .card__bottom span:not(.link) {
         font-family: var(--font-title);
         font-size: 2em;
         font-weight: 600;
         line-height: 1;
         color: var(--color-black); }
         @media only screen and (min-width: 769px) {
-          .about .card__bottom span {
+          .about .card__bottom span:not(.link) {
             font-size: 2.5em; } }
         @media only screen and (min-width: 1025px) {
-          .about .card__bottom span {
+          .about .card__bottom span:not(.link) {
             font-size: 3.5em; } }
         @media only screen and (min-width: 1367px) {
-          .about .card__bottom span {
+          .about .card__bottom span:not(.link) {
             font-size: 4em; } }
     .about .card__top {
       --justify-content: center;
