@@ -1501,41 +1501,6 @@ div[style*="color: rgb(0, 0, 0);"]:before {
 
 .wrapper-guidepost {
   min-height: 100vh; }
-  .wrapper-guidepost:before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    content: "";
-    width: 100%;
-    height: 100%;
-    background-image: url("../images/logos/dlc-group-logo_big.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: var(--color-white);
-    background-attachment: fixed;
-    opacity: 1;
-    animation: hide 0.5s forwards;
-    animation-delay: 1.5s;
-    z-index: 10; }
-    @media only screen and (max-width: 768px) {
-      .wrapper-guidepost:before {
-        background-size: 200px; } }
-  .wrapper-guidepost:after {
-    position: absolute;
-    top: 0;
-    display: block;
-    content: "";
-    width: 100%;
-    height: 100%;
-    background-image: url("../images/backgrounds/main-bg.webp");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    opacity: 0.2;
-    z-index: -1;
-    backdrop-filter: saturate(160%) blur(5px);
-    background-size: cover; }
 
 .guidepost {
   --pt: 4rem;
@@ -1636,15 +1601,48 @@ div[style*="color: rgb(0, 0, 0);"]:before {
       .redirect-card__bottom > span:hover {
         text-decoration: underline; }
 
-@keyframes hide {
+/*animations*/
+.header-guidepost__logo {
+  opacity: 0;
+  animation: showUp 1s forwards; }
+
+.header-guidepost__content:nth-of-type(2) {
+  opacity: 0;
+  animation: show 1s forwards;
+  animation-delay: 1s; }
+
+.header-guidepost__content:last-of-type {
+  opacity: 0;
+  animation: show 1s forwards;
+  animation-delay: 3s; }
+
+.header-guidepost .guidepost .redirect-card:nth-of-type(1) {
+  opacity: 0;
+  animation: show 1s forwards;
+  animation-delay: 1.5s; }
+
+.header-guidepost .guidepost .redirect-card:nth-of-type(2) {
+  opacity: 0;
+  animation: show 1s forwards;
+  animation-delay: 2s; }
+
+.header-guidepost .guidepost .redirect-card:nth-of-type(3) {
+  opacity: 0;
+  animation: show 1s forwards;
+  animation-delay: 2.5s; }
+
+@keyframes showUp {
   from {
-    opacity: 1;
-    z-index: 10; }
-  99% {
     opacity: 0;
-    z-index: 10; }
+    transform: translateY(100%); }
   to {
-    opacity: 0;
-    z-index: -10; } }
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes show {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 
 /*# sourceMappingURL=management.css.map */
