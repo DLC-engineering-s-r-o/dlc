@@ -618,19 +618,19 @@ footer {
   .header-guidepost__content:last-of-type {
     opacity: 0;
     animation: show 0.5s forwards;
-    animation-delay: 4s; }
+    animation-delay: 3.2s; }
   .header-guidepost .guidepost .redirect-card:nth-of-type(1) {
     opacity: 0;
     animation: show 0.5s forwards;
-    animation-delay: 2.5s; }
+    animation-delay: 2.3s; }
   .header-guidepost .guidepost .redirect-card:nth-of-type(2) {
     opacity: 0;
     animation: show 0.5s forwards;
-    animation-delay: 3s; }
+    animation-delay: 2.6s; }
   .header-guidepost .guidepost .redirect-card:nth-of-type(3) {
     opacity: 0;
     animation: show 0.5s forwards;
-    animation-delay: 3.5s; } }
+    animation-delay: 2.9s; } }
 
 @keyframes showUp {
   from {
