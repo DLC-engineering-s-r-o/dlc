@@ -1602,29 +1602,32 @@ div[style*="color: rgb(0, 0, 0);"]:before {
         text-decoration: underline; }
 
 /*animations*/
-@media only screen and (min-width: 769px) {
-  .header-guidepost__logo {
-    animation: showUp 2.5s forwards; }
-  .header-guidepost__content:nth-of-type(2) {
-    opacity: 0;
-    animation: show 0.5s forwards;
-    animation-delay: 2s; }
-  .header-guidepost__content:last-of-type {
-    opacity: 0;
-    animation: show 0.5s forwards;
-    animation-delay: 3.2s; }
-  .header-guidepost .guidepost .redirect-card:nth-of-type(1) {
-    opacity: 0;
-    animation: show 0.5s forwards;
-    animation-delay: 2.3s; }
-  .header-guidepost .guidepost .redirect-card:nth-of-type(2) {
-    opacity: 0;
-    animation: show 0.5s forwards;
-    animation-delay: 2.6s; }
-  .header-guidepost .guidepost .redirect-card:nth-of-type(3) {
-    opacity: 0;
-    animation: show 0.5s forwards;
-    animation-delay: 2.9s; } }
+.header-guidepost {
+  --animation-time:1s;
+  --animation-delay: calc( var(--animation-time) / 2); }
+  @media only screen and (min-width: 769px) {
+    .header-guidepost__logo {
+      animation: showUp 2.5s forwards; }
+    .header-guidepost__content:nth-of-type(2) {
+      opacity: 0;
+      animation: show var(--animation-time) forwards;
+      animation-delay: calc(var(--animation-delay) * 4); }
+    .header-guidepost__content:last-of-type {
+      opacity: 0;
+      animation: show var(--animation-time) forwards;
+      animation-delay: calc(var(--animation-delay) * 8); }
+    .header-guidepost .guidepost .redirect-card:nth-of-type(1) {
+      opacity: 0;
+      animation: show var(--animation-time) forwards;
+      animation-delay: calc(var(--animation-delay) * 5); }
+    .header-guidepost .guidepost .redirect-card:nth-of-type(2) {
+      opacity: 0;
+      animation: show var(--animation-time) forwards;
+      animation-delay: calc(var(--animation-delay) * 6); }
+    .header-guidepost .guidepost .redirect-card:nth-of-type(3) {
+      opacity: 0;
+      animation: show var(--animation-time) forwards;
+      animation-delay: calc(var(--animation-delay)*7); } }
 
 @keyframes showUp {
   from {

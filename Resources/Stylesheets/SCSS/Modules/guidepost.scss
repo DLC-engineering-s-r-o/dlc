@@ -183,6 +183,9 @@
 
 /*animations*/
 .header-guidepost {
+  --animation-time:1s;
+  --animation-delay: calc( var(--animation-time) / 2);
+
   @include res-min-tablet {
     &__logo {
       animation: showUp 2.5s forwards;
@@ -190,33 +193,33 @@
 
     &__content:nth-of-type(2) {
       opacity: 0;
-      animation: show 0.5s forwards;
-      animation-delay: 2s;
+      animation: show var(--animation-time) forwards;
+      animation-delay: calc(var(--animation-delay) * 4);
     }
 
     &__content:last-of-type {
       opacity: 0;
-      animation: show 0.5s forwards;
-      animation-delay: 3.2s;
+      animation: show var(--animation-time) forwards;
+      animation-delay: calc(var(--animation-delay) * 8);
     }
 
     .guidepost {
       .redirect-card:nth-of-type(1) {
         opacity: 0;
-        animation: show 0.5s forwards;
-        animation-delay: 2.3s;
+        animation: show var(--animation-time) forwards;
+        animation-delay: calc(var(--animation-delay) * 5);
       }
 
       .redirect-card:nth-of-type(2) {
         opacity: 0;
-        animation: show 0.5s forwards;
-        animation-delay: 2.6s;
+        animation: show var(--animation-time) forwards;
+        animation-delay: calc(var(--animation-delay) * 6);
       }
 
       .redirect-card:nth-of-type(3) {
         opacity: 0;
-        animation: show 0.5s forwards;
-        animation-delay: 2.9s;
+        animation: show var(--animation-time) forwards;
+        animation-delay: calc(var(--animation-delay)*7);
       }
     }
   }
