@@ -188,44 +188,44 @@
 
   @include res-min-tablet {
     &__logo {
-      animation: showUp 2.5s forwards;
+      animation: showUpGuidepost 2.5s forwards;
     }
 
     &__content:nth-of-type(2) {
       opacity: 0;
-      animation: show var(--animation-time) forwards;
+      animation: showGuidepost var(--animation-time) forwards;
       animation-delay: calc(var(--animation-delay) * 4);
     }
 
     &__content:last-of-type {
       opacity: 0;
-      animation: show var(--animation-time) forwards;
+      animation: showGuidepost var(--animation-time) forwards;
       animation-delay: calc(var(--animation-delay) * 8);
     }
 
     .guidepost {
       .redirect-card:nth-of-type(1) {
         opacity: 0;
-        animation: show var(--animation-time) forwards;
+        animation: showGuidepost var(--animation-time) forwards;
         animation-delay: calc(var(--animation-delay) * 5);
       }
 
       .redirect-card:nth-of-type(2) {
         opacity: 0;
-        animation: show var(--animation-time) forwards;
+        animation: showGuidepost var(--animation-time) forwards;
         animation-delay: calc(var(--animation-delay) * 6);
       }
 
       .redirect-card:nth-of-type(3) {
         opacity: 0;
-        animation: show var(--animation-time) forwards;
+        animation: showGuidepost var(--animation-time) forwards;
         animation-delay: calc(var(--animation-delay)*7);
       }
     }
   }
 }
 
-@keyframes showUp {
+@keyframes showUpGuidepost {
   from {
     transform: scale(2) translateY(60%);
   }
@@ -237,7 +237,7 @@
   }
 }
 
-@keyframes show {
+@keyframes showGuidepost {
   from {
     opacity: 0;
   }

@@ -613,29 +613,29 @@ footer {
   --animation-delay: calc( var(--animation-time) / 2); }
   @media only screen and (min-width: 769px) {
     .header-guidepost__logo {
-      animation: showUp 2.5s forwards; }
+      animation: showUpGuidepost 2.5s forwards; }
     .header-guidepost__content:nth-of-type(2) {
       opacity: 0;
-      animation: show var(--animation-time) forwards;
+      animation: showGuidepost var(--animation-time) forwards;
       animation-delay: calc(var(--animation-delay) * 4); }
     .header-guidepost__content:last-of-type {
       opacity: 0;
-      animation: show var(--animation-time) forwards;
+      animation: showGuidepost var(--animation-time) forwards;
       animation-delay: calc(var(--animation-delay) * 8); }
     .header-guidepost .guidepost .redirect-card:nth-of-type(1) {
       opacity: 0;
-      animation: show var(--animation-time) forwards;
+      animation: showGuidepost var(--animation-time) forwards;
       animation-delay: calc(var(--animation-delay) * 5); }
     .header-guidepost .guidepost .redirect-card:nth-of-type(2) {
       opacity: 0;
-      animation: show var(--animation-time) forwards;
+      animation: showGuidepost var(--animation-time) forwards;
       animation-delay: calc(var(--animation-delay) * 6); }
     .header-guidepost .guidepost .redirect-card:nth-of-type(3) {
       opacity: 0;
-      animation: show var(--animation-time) forwards;
+      animation: showGuidepost var(--animation-time) forwards;
       animation-delay: calc(var(--animation-delay)*7); } }
 
-@keyframes showUp {
+@keyframes showUpGuidepost {
   from {
     transform: scale(2) translateY(60%); }
   40% {
@@ -643,7 +643,7 @@ footer {
   to {
     transform: scale(1) translateX(0); } }
 
-@keyframes show {
+@keyframes showGuidepost {
   from {
     opacity: 0; }
   to {
