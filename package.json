@@ -14,7 +14,6 @@
     "axios": "^0.26.1",
     "browser-sync": "^2.27.9",
     "clean-css-cli": "^5.5.2",
-    "node-sass": "^7.0.1",
     "postcss": "^8.4.7",
     "postcss-cli": "^9.1.0",
     "postcss-loader": "^6.2.1",
@@ -54,10 +53,13 @@
     "bundle:home.css": "npm run compile:home.scss && postcss wwwroot/css/home.css --config ./postcss.config.js | cleancss -o wwwroot/css/home.min.css",
     "bundle:management.css": "npm run compile:management.scss && postcss wwwroot/css/management.css --config ./postcss.config.js | cleancss -o wwwroot/css/management.min.css",
     "compile:scss": "npm run compile:home.scss && npm run compile:management.scss",
-    "compile:home.scss": "node-sass --source-map=true Resources/Stylesheets/Scss/home.scss wwwroot/css/home.css",
-    "compile:management.scss": "node-sass --source-map=true Resources/Stylesheets/Scss/management.scss wwwroot/css/management.css",
+    "compile:home.scss": "sass --source-map=true Resources/Stylesheets/Scss/home.scss wwwroot/css/home.css",
+    "compile:management.scss": "sass --source-map=true Resources/Stylesheets/Scss/management.scss wwwroot/css/management.css",
     "compile:ts": "tsc -p Resources",
     "stylelint": "stylelint --fix Resources/Stylesheets/SCSS/**/*.scss --custom-syntax postcss-scss",
     "watch:scss": "npm run bundle:css & watch \"npm run bundle:css\" Resources/Stylesheets/Scss"
+  },
+  "dependencies": {
+    "sass": "^1.91.0"
   }
 }
